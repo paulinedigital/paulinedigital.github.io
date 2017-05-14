@@ -1,0 +1,54 @@
+@import "../../static/styles/main.utils.css";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	padding: calc(1em + var(--size-gutter) * 4);
+	width: 100%;
+	color: var(--color-white);
+	pointer-events: none;
+}
+
+.container {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+
+	flex-wrap: wrap;
+}
+
+.animated {
+	animation-duration: 300ms;
+
+	animation-fill-mode: both;
+	will-change: transform;
+}
+
+.animated:not(.open).slideUp {
+	animation-name: slideUp;
+}
+
+.animated.slideDown {
+	animation-name: slideDown;
+}
+
+@keyframes slideUp {
+	0% {
+    	transform: translateY(0);
+	}
+	100% {
+	    transform: translateY(-100%);
+	}
+}
+
+@keyframes slideDown {
+	0% {
+    	transform: translateY(-100%);
+	}
+	100% {
+	    transform: translateY(0);
+	}
+}

@@ -1,0 +1,18 @@
+@import "../../../../static/styles/main.utils.css";
+
+.about {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.container {
+	color: var(--color-white);
+	padding: calc(4em + var(--size-gutter) * 4);
+	max-width: calc(46vw + 46vh + .5vmin);
+}

@@ -1,0 +1,29 @@
+@import './main.utils.css';
+
+@font-face {
+    font-family: 'averta';
+    src: url(./../fonts/averta/regular/averta-regular-webfont.eot);
+    src: url(./../fonts/averta/regular/averta-regular-webfont.eot?#iefix) format('embedded-opentype'),
+         url(./../fonts/averta/regular/averta-regular-webfont.woff2) format('woff2'),
+         url(./../fonts/averta/regular/averta-regular-webfont.woff) format('woff'),
+         url(./../fonts/averta/regular/averta-regular-webfont.ttf) format('truetype'),
+         url(./../fonts/averta/regular/averta-regular-webfont.svg#averta_regularregular) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'averta';
+    src: url(./../fonts/averta/black/averta-black-webfont.eot);
+    src: url(./../fonts/averta/black/averta-black-webfont.eot?#iefix) format('embedded-opentype'),
+         url(./../fonts/averta/black/averta-black-webfont.woff2) format('woff2'),
+         url(./../fonts/averta/black/averta-black-webfont.woff) format('woff'),
+         url(./../fonts/averta/black/averta-black-webfont.ttf) format('truetype'),
+         url(./../fonts/averta/black/averta-black-webfont.svg#avertablack) format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.active-hero {
+	transform: translateY(-65%);
+}

@@ -1,0 +1,112 @@
+@import "../../../../static/styles/main.utils.css";
+
+.work {
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: calc(1em + var(--size-gutter) * 4);
+	position: relative;
+	transform: translate3d(0, 0, 0);
+}
+
+.card:nth-child(even) .header {
+	order: 2;
+	padding-left: calc(1em + var(--size-gutter) * 4);
+}
+
+.card:nth-child(even) .media {
+	order: 1;
+}
+
+.card:nth-child(even) .story {
+	order: 3;
+}
+
+.card:nth-child(even) .services {
+	order: 4;
+}
+
+.header {
+	width: 40%;
+	position: relative;
+	z-index: 2;
+	padding-right: calc(1em + var(--size-gutter) * 4);
+	text-align: center;
+}
+
+.media {
+	width: 60%;
+	position: relative;
+	z-index: 1;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.title {
+	font-size: 2.5em;
+}
+
+.description {
+	font-size: .8em;
+}
+
+.type {
+	font-size: 12px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.services,
+.story {
+	padding: calc(2em + var(--size-gutter));
+	padding-bottom: 0;
+}
+
+.services {
+	width: 40%;
+}
+
+.story {
+	width: 60%;
+}
+
+.bg {
+	display: block;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.poly {
+	fill: var(--color-rose);
+	transform-origin: center center;
+}
+
+
+/*.card:nth-child(even) .bg {
+	transform: scaleY(-1);
+}*/

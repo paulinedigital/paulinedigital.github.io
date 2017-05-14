@@ -1,0 +1,17 @@
+:root {
+	--font-size-base: calc(1vw + 1vh + .5vmin);
+
+	--font-family-base: 'averta', sans-serif;
+	--font-weight-base: 400;
+
+	--font-family-heading: 'averta', sans-serif;
+	--font-weight-heading: 900;
+
+	--color-rose: #ff006d;
+	--color-white: #ffffff;
+	--color-solitude: #ebf7ff;
+	--color-gray-blue: #9BA3A9;
+	--color-black-pearl: #041829;
+
+	--size-gutter: .2em;
+}

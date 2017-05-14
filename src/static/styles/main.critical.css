@@ -1,0 +1,167 @@
+@import './main.utils.css';
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+::selection {
+	background: var(--color-rose);
+}
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	background-color: var(--color-solitude);
+	color: var(--color-black-pearl);
+	font-weight: var(--font-weight-base);
+	font-style: normal;
+	font-size: var(--font-size-base);
+	font-family: var(--font-family-base);
+
+	text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background: var(--color-rose);
+}
+
+h1, h2, h3 {
+	margin: 0;
+	letter-spacing: .05em;
+	font-weight: var(--font-weight-heading);
+	font-family: var(--font-family-heading);
+	line-height: 1.15em;
+}
+
+h1 {
+	font-weight: var(--font-weight-base);
+	font-family: var(--font-family-base);
+}
+
+h1, h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1rem;
+	line-height: 1.6em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+strong {
+	font-weight: var(--font-weight-heading);
+}
+
+a {
+    position: relative;
+    padding-bottom: 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+
+	outline: 0;
+	color: var(--color-rose);
+	text-decoration: none;
+}
+
+a:after,
+a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: var(--color-rose);
+    pointer-events: none;
+}
+
+a:after {
+    right: 0;
+    transition: width .4s cubic-bezier(.42, .12, .31, .99);
+}
+
+a:before {
+    left: 0;
+    transition: width 0s cubic-bezier(.42, .12, .31, .99);
+}
+
+.active:after,
+a:hover:after {
+    width: 100%;
+    background: 0 0;
+    transition: all 0s cubic-bezier(.42, .12, .31, .99);
+}
+
+.active:before,
+a:hover:before {
+    width: 100%;
+    transition: width .4s cubic-bezier(.42, .12, .31, .99);
+}
+
+.app {
+	position: relative;
+	z-index: 1;
+	background-color: var(--color-solitude);
+}
+
+.spinner:after {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	margin: auto;
+	padding-top: 3em;
+	height: 12px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMDAiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik02NDQgOTEyczAtLjEgMCAwYzg1LjgtMTAzLjggMTM3LjMtMjM2LjkgMTM3LjMtMzgycy01MS41LTI3OC4xLTEzNy4yLTM4MS45Yy0xMy44LTE2LjctMjguNS0zMi43LTQ0LjEtNDcuOC0xNS41IDE1LjEtMzAuMiAzMS4xLTQ0LjEgNDcuOEM0NzAuMiAyNTEuOSA0MTguNyAzODQuOSA0MTguNyA1MzBzNTEuNSAyNzguMSAxMzcuMiAzODEuOWwuMS4xLTIwMiAyMDIgMTA5LTExLjUgMTM3LTEzNyAxMTAuOSAxMTAuOSA4OC4yLTkuM0w2NDQgOTEyek00ODMuNyA1MzBjMC0xMjUuOSA0My41LTI0MS42IDExNi4zLTMzMyA1NS4xIDY5LjIgOTMuNCAxNTIuNCAxMDguOCAyNDMuM0w0ODQuMSA1NDkuOWMtLjItNi42LS40LTEzLjItLjQtMTkuOXptNy40IDg4LjhsMjI0LjgtMTA5LjZjLjMgNi45LjQgMTMuOS40IDIwLjggMCAxMjUuOS00My41IDI0MS42LTExNi4zIDMzMy01NS4zLTY5LjQtOTMuNy0xNTIuOS0xMDguOS0yNDQuMnoiLz48L3N2Zz4=) no-repeat center top;
+	background-size: 2em auto;
+	color: #fff;
+	content: "Pauline.Digital";
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 12px;
+	opacity: 1;
+	transition: opacity 300ms ease;
+}
+
+.spinner.is-loaded:after {
+	opacity: 0;
+}
+
+.spinner.is-loaded:not(.is-animating):after {
+	display: none;
+}
+
+.mask {
+	overflow: hidden;
+	height: 100vh;
+	animation: mask-show 600ms 400ms forwards ease;
+
+	clip-path: circle(0% at 50% 50%);
+}
+
+@keyframes mask-show {
+	0% {
+		clip-path: circle(0% at 50% 50%);
+	}
+	100% {
+		clip-path: circle(100% at 50% 50%);
+	}
+}

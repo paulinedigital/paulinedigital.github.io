@@ -1,0 +1,43 @@
+@import "../../static/styles/main.utils.css";
+
+.nav {
+	max-width: 100%;
+	width: auto;
+
+	flex-shrink: 0;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.item {
+	display: inline-block;
+}
+
+.link {
+	pointer-events: all;
+	cursor: pointer;
+	color: var(--color-white);
+	display: block;
+	line-height: 14px;
+	font-size: 12px;
+	letter-spacing: .1em;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+	text-decoration: none;
+}
+
+.item:not(:last-child) .link {
+	margin-right: 3em;
+}
+
+.link:after,
+.link:before {
+	background-color: var(--color-white);
+}

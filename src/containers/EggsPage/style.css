@@ -1,0 +1,10 @@
+@import "../../static/styles/main.utils.css";
+
+.page {
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	z-index: 2;
+}

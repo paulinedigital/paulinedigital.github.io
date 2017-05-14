@@ -1,0 +1,31 @@
+@import "../../static/styles/main.utils.css";
+
+.brand {
+	position: relative;
+    z-index: 10;
+	display: flex;
+
+	flex: 1 0 auto;
+	align-items: center;
+}
+
+.link {
+	display: inline-block;
+	border: 0;
+    text-decoration: none;
+	transition: color 300ms ease;
+	pointer-events: all;
+	font-size: 1em;
+	line-height: 1em;
+	color: var(--color-white);
+}
+
+.mark {
+	display: inline-block;
+	width: auto;
+	height: 1em;
+}
+
+.active {
+	color: var(--color-white);
+}
