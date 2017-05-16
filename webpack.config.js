@@ -45,6 +45,7 @@ module.exports = {
 		modules: [
 			'node_modules',
 			path.resolve(__dirname, 'src/static'),
+			path.resolve(__dirname, 'src/server'),
 			path.resolve(__dirname, 'src/components'),
 			path.resolve(__dirname, 'src/containers')
 		],
@@ -97,7 +98,7 @@ module.exports = {
 			},
 
 			{
-				test: /\.(jpg|png|gif)$/,
+				test: /\.(jpg|png|gif|svg)$/,
 				include: /src\/static\/images\//,
 				loader: 'file-loader?name=static/images/[name].[ext]'
 			},
@@ -113,8 +114,9 @@ module.exports = {
 			},
 
 			{
-				test: /\.(mp4|webm|svg)$/,
-				loader: 'url-loader?limit=10000'
+				test: /\.(mp4|webm)$/,
+				include: /src\/static\/media\//,
+				loader: 'url-loader?name=static/images/[name].[ext]&limit=10000'
 			}
 
 		]

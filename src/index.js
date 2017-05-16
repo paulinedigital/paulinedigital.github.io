@@ -2,17 +2,17 @@ import 'styles/main.critical.css';
 import 'styles/main.global.css';
 
 import { h, render } from 'preact';
-import Prismic from 'prismic.io';
 
-window.app = {};
+System.import('API').then(module => {
+	const SERVER = new module.default();
 
-System.import('Page').then(module => {
-	Prismic.api('https://paulinedigital.prismic.io/api').then(api => {
+	SERVER.get((api) => {
+		window.app = {};
 		window.app.api = api;
 
-		render(<module.default />, document.querySelector('.app'));
-	}).catch(err => {
-		console.log(err);
+		System.import('Page').then(module => {
+			render(<module.default />, document.querySelector('.app'));
+		});
 	});
 });
 

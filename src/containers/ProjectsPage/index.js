@@ -5,9 +5,9 @@ export default class ProjectsPage extends Component {
 
 	render(props) {
 		return (
-			<section className="page">
-				About
-			</section>
+			<div className={ style.box }>
+				<h1 className={ style.title }>Projects</h1>
+			</div>
 		);
 	}
 
