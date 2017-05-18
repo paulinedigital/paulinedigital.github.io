@@ -34,6 +34,6 @@ body,li,ul{margin:0}a,main{overflow:hidden}@font-face{font-family:averta;src:url
 </main>
 </body>
 <script type="text/javascript">
-!function(){for(var t=document.getElementsByTagName('a'),e=0;e<t.length;e++){var a=t[e];a.getAttribute('href')&&a.hostname!==location.hostname&&(a.target='_blank')}}();
+!function(){for(var e=document.getElementsByTagName("a"),t=0;t<e.length;t++){var n=e[t],a=n.getAttribute("href");a&&n.hostname!==location.hostname&&n.addEventListener("click",function(e){e.preventDefault();var t=window.open(a);t.focus()})}}();
 </script>
 </html>
