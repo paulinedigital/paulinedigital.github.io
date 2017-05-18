@@ -36,6 +36,6 @@ html{font-size:2vw}body,html{height:100%}main{min-height:100%}body,li,ul{margin:
 </main>
 </body>
 <script type="text/javascript">
-!function(){for(var e=document.getElementsByTagName('a'),t=0;t<e.length;t++){var n=e[t],a=n.getAttribute('href');a&&n.hostname!==location.hostname&&n.addEventListener('click',function(e){e.preventDefault();var t=window.open(a, '_blank');t.focus()})}}();
+!function(){for(var e=document.getElementsByTagName('a'),t=0;t<e.length;t++){var n=e[t];n.getAttribute('href')&&n.hostname!==location.hostname&&n.addEventListener('click',function(e){e.preventDefault();var t=window.open(e.target.href, '_blank');t.focus()})}}();
 </script>
 </html>
